@@ -25,13 +25,13 @@ The app has the following functionality:
 
 ![Raffle](https://github.com/Sanyam1Gupta/Latest-Assignment-4th-feb/tree/master/screenshots/Raffle.png "Raffle")
 
-### Raffle
+### Raffle With Winner
 
-![Raffle With Winner](https://raw.githubusercontent.com/Sanyam1Gupta/Latest-Assignment-4th-feb/tree/master/screenshots/Raffle_with_Winner.png "Raffle With Winner")
+![Raffle With Winner](https://github.com/Sanyam1Gupta/Latest-Assignment-4th-feb/tree/master/screenshots/Raffle_with_Winner.png "Raffle With Winner")
 
 ### Result Statistics
 
-![Statistics](https://raw.github.com/Sanyam1Gupta/Latest-Assignment-4th-feb/tree/master/screenshots/Statistics.png "Statistics")
+![Statistics](https://github.com/Sanyam1Gupta/Latest-Assignment-4th-feb/tree/master/screenshots/Statistics.png "Statistics")
 
 ### Users
 
