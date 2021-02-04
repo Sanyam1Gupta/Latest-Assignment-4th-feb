@@ -1,7 +1,8 @@
 # Raffle App with Meteor.js
 
-Simple Web App made with Meteor.js to allow for small raffles.
-I wrote this app to learn Meteor.js
+Assignment made with Meteor.js to allow for small raffles.
+Meteor is a full-stack JavaScript platform that can be used to develop modern single page web applications.
+This is for Assignment.
 
 The app has the following functionality:
 
@@ -10,7 +11,7 @@ The app has the following functionality:
 - Create new Raffle
 - Draw winner in Raffle
 - Draw loser in Raffle
-- Statistics
+- Result Statistics
 - Configure type of item the Raffle is about (wine, beer, other)
 - Configure number of items in Raffle based on number of tickets (e.g. 10 tickets = 1 item, 20 tickets = 2 items, etc)
 - Configure max number of items in Raffle (e.g. max 1 item, 10 tickets = 1 item, 20 tickets = 1 item, etc)
