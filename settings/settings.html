@@ -1,0 +1,50 @@
+<template name="settings">
+    <div class="mdl-typography--display-2">
+        <h1 class="display-2">Settings</h1>
+    </div>
+
+    <div class="header-space">
+        <label for="activateNumberOfTicketsForItem" class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+            <input type="checkbox" id="activateNumberOfTicketsForItem" class="mdl-switch__input" {{getCheckBoxTrueFalseSetting "activateNumberOfTicketsForItem"}} />
+            <span class="mdl-switch__label">Number of tickets needed for price</span>
+        </label>
+        {{#if getSettingsValue "activateNumberOfTicketsForItem"}}
+            <div>
+                <div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="numberOfTicketsForOneItem" value="{{getSettingsValue "numberOfTicketsForOneItem"}}" />
+                        <label class="mdl-textfield__label" for="numberOfTicketsForOneItem">Number of tickets needed for one item</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="itemNameSingular" value="{{getSettingsValue "itemNameSingular"}}" />
+                        <label class="mdl-textfield__label" for="itemNameSingular">Item Name Singular</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="itemNamePlural" value="{{getSettingsValue "itemNamePlural"}}" />
+                        <label class="mdl-textfield__label" for="itemNamePlural">Item Name Plural</label>
+                    </div>
+                </div>
+                <div>
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" pattern="[0-9]*" id="maxNumberOfItems" value="{{getSettingsValue "maxNumberOfItems"}}" />
+                        <label class="mdl-textfield__label" for="maxNumberOfItems">Maximum number of items (0 is unlimited)</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                </div>
+            </div>
+        {{/if}}
+
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="[0-9]*" id="valuePerTicket" value="{{getSettingsValue "valuePerTicket"}}" />
+            <label class="mdl-textfield__label" for="valuePerTicket">Value per ticket</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+    </div>
+
+</template>

@@ -1,0 +1,74 @@
+<template name="raffle">
+
+    <div id="winner-announcement-popup"></div>
+
+    <div class="raffle-top">
+        {{#unless isDone }}
+            {{#unless isMaster}}
+                {{> addParticipant}}
+            {{/unless}}
+        {{/unless}}
+
+        {{#unless isDone }}
+            {{#if isMaster}}
+                {{> drawWinner}}
+                {{> drawLoser}}
+            {{/if}}
+        {{/unless}}
+    </div>
+
+
+    <div class="raffle-description">
+        <div class="mdl-typography--display-2">
+            <h1 class="display-2">Raffle for {{raffleDateFormatted}}</h1>
+        </div>
+
+        <p class="status-paragraph">
+            {{#unless isDone}}
+                {{ numberOfParticipants }} participants in play. {{ getNumberOfTicketsInPlay }} total tickets in the pool.
+            {{/unless}}
+            {{#if isDone}}
+                There were {{ getTotalNumberOfParticipants }} participants and {{ getTotalNumberOfTickets }} tickets.
+            {{/if}}
+        </p>
+        {{#unless isDone }}
+            {{#if numberOfTicketsSettingActivated}}
+                {{> numberOfItemsAvailable}}
+            {{/if}}
+        {{/unless}}
+    </div>
+
+    {{#if anyWinners}}
+        {{> winnerTable}}
+    {{/if}}
+
+    {{#if anyLosers}}
+        {{> losersTable}}
+    {{/if}}
+
+    {{> participantsTable}}
+
+    {{#if isMaster}}
+        <div>
+            {{#if isDone}}
+                <button id="undoFinishRaffle" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--middle">
+                    Start Raffle Again
+                </button>
+            {{/if}}
+
+            {{#unless isDone }}
+                <button id="finishRaffle" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--middle">
+                    Finish Raffle
+                </button>
+            {{/unless}}
+        </div>
+
+        <div>
+            <button id="deleteRaffle" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--middle">
+                Delete Raffle
+            </button>
+        </div>
+
+    {{/if}}
+
+</template>

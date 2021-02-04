@@ -1,0 +1,33 @@
+<template name="header">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <a href="/"><img class="logo" src="/images/logo.png"></a>
+            <a href="/">Home</a>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation. We hide it in small screens. -->
+
+            {{#if isMaster}}
+                <button id="user-manager">
+                    Add User
+                </button>
+            {{/if}}
+
+            {{#if isMaster}}
+                <button id="settings">
+                    Settings
+                </button>
+            {{/if}}
+
+            <button id="statistics">
+                Result Statistics 
+            </button>
+
+            <button id="rafflemasterlogin">
+                Become Raffle Master
+            </button>
+
+        </div>
+    </header>
+</template>

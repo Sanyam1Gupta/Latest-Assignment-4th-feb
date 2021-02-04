@@ -1,0 +1,31 @@
+
+
+<template name="userManager">
+    {{#if isMaster}}
+        <form class="add-user">
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" id="name" name="name" required />
+                <label class="mdl-textfield__label" for="name">Name</label>
+            </div>
+            <div>
+                <button id="addUser" type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    Add User
+                </button>
+            </div>
+        </form>
+
+        <table class="mdl-data-table mdl-js-data-table mdl-data-table--full-width">
+            <thead>
+            </thead>
+            <tbody>
+            {{#each users}}
+                <tr class="clickable-row" data-href="/edit-user/{{_id}}">
+                    <td class="mdl-data-table__cell--non-numeric">
+                        {{name}}
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    {{/if}}
+</template>

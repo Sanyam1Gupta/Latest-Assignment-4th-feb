@@ -1,0 +1,32 @@
+<template name="raffleCard">
+    <div class="mdl-card mdl-shadow--2dp raffle-card">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">{{raffleDateFormatted}}</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <p>
+                Raffle for {{raffleDateFormatted}}.
+                {{#if isDone}}
+                    There were {{getTotalNumberOfParticipants}} participants in total.
+                {{/if}}
+            </p>
+            <p class="description-paragraph">
+                {{#if isDone}}
+                    {{#if anyWinners}}
+
+                    The winner{{#if severalWinners}}s{{/if}} were:
+                    <ol class="winner-ol">
+                        {{#each winners}}
+                            <li>{{getNameFromUserId userId}}</li>
+                        {{/each}}
+                    </ol>
+                    {{/if}}
+                {{/if}}
+
+                {{#unless isDone}}
+                    The raffle is currently still going on!
+                {{/unless}}
+            </p>
+        </div>
+    </div>
+</template>
