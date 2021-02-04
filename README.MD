@@ -2,9 +2,11 @@
 
 Assignment made with Meteor.js to allow for small raffles.
 Meteor is a full-stack JavaScript platform that can be used to develop modern single page web applications.
-This is for Assignment.
+This is for Assignment. This application is full-fledged having frontend, backend and database. All managed with Meteor which is framework for full stack development.
 
-The app has the following functionality:
+I had some doubts regarding the problem statement and the API data fields. I have tried to incorporate the assignment points to the best as much as i understood them.
+
+The application implemented by me has the following functionality:
 
 - Save users (persons to add to Raffles later)
 - Log in as Raffle Master (simple, without password)
