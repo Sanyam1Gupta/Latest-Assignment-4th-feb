@@ -1,4 +1,4 @@
-# Raffle App with Meteor.js
+# Raffle App Assignment with Meteor.js
 
 Assignment made with Meteor.js to allow for small raffles.
 Meteor is a full-stack JavaScript platform that can be used to develop modern single page web applications.
